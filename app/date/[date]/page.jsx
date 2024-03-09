@@ -9,7 +9,7 @@ const page = () => {
     let [data, setData] = useState([]);
     let Show = () => {
         let d=params.date
-        let formatdate=d.split('-').join('/')
+        let formatdate=d.split('-').reverse().join('/')
         let wholedata=JSON.parse(localStorage.getItem('data'))
         let searchdata=wholedata.filter((item,index)=>(
             item.d.startsWith(formatdate)
