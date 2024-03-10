@@ -40,7 +40,7 @@ const Page = () => {
   };
 
   const deleteTask = (index) => {
-    const newData = data.filter((_, i) => i !== index);
+    const newData = data.filter((item, i) => i !== index);
     localStorage.setItem("data", JSON.stringify(newData));
     setData(newData);
   };

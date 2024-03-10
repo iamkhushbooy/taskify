@@ -16,8 +16,6 @@ const Tasklist = ({ date, title, des, del }) => {
                 <p className='text-[#cccccc] text-justify px-5 py-2'>{des}</p>
             </div>
             <button onClick={del} className='w-[100px] h-[30px] bg-red-400 rounded text-black'>Delete</button>
-
-
         </div>
     )
 }
