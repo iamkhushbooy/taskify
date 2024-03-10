@@ -24,7 +24,7 @@ const Header = () => {
                         {!bytitle && <button onClick={() => setBydate(!bydate)} className='text-blue-800 border-[1px] border-blue-800 p-1 mr-3 rounded-lg'>By Date</button>}
                         {bydate && <>
                             <input value={date} onChange={e => setDate(e.target.value)} type="date" className='w-[200px] p-1 rounded-md bg-slate-400 border border-green-800 text-green-800' />
-                            <button onClick={() => router.push(`/search?date=${date}`)} className='p-1 text-green-800 border border-green-800 rounded-lg ml-3'>Search</button></>}
+                            <button onClick={() => router.push(`/search/date/${date}`)} className='p-1 text-green-800 border border-green-800 rounded-lg ml-3'>Search</button></>}
                         {!bydate && <button onClick={() => {
                             setBytitle(!bytitle);
                         }
@@ -32,7 +32,7 @@ const Header = () => {
                         {bytitle && <>
                             <input type="text" value={title} onChange={e => setTitle(e.target.value)} placeholder='search by title' value={title} className='w-[200px] p-1 text-center rounded-md bg-slate-400 border border-green-800 text-green-800' />
                             <button onClick={() => {
-                                router.push(`/search?title=${title}`);
+                                router.push(`/search/title/${title}`);
                             }} className='p-1 rounded-lg ml-3 text-green-800 border border-green-800 '>Search</button></>}
 
                     </>
