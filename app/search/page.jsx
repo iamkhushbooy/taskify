@@ -9,7 +9,7 @@ const Page = () => {
     const storedData = [...JSON.parse(localStorage.getItem('data'))||[]];
     console.log(storedData);
     const fetchData = () => {
-        if (storedData) {
+        if (storedData){
             if (searchParams.has("date")) {
                 const d = searchParams.get("date");
                 const formattedDate = d.split('-').reverse().join('/');
